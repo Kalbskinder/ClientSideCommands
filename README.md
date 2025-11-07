@@ -23,3 +23,6 @@ Adds a bunch of useful non-cheat clientside commands to your game such as
 </ul>
 </details>
 
+## 📦 Modpack
+
+Feel free to add this mod in your modpacks.
