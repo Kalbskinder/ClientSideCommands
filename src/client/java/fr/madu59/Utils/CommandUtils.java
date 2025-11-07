@@ -103,6 +103,31 @@ public class CommandUtils {
         });
     }
 
+    public static void RegisterTwoArgs(String commandName, java.util.function.BiConsumer<Float, Float> action){
+        ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
+            dispatcher.register(
+                literal(commandName)
+                .then(argument("arg1", StringArgumentType.string())
+                    .then(argument("arg2", StringArgumentType.string())
+                        .executes(context -> {
+                            try{
+                                float arg1 = Float.parseFloat(StringArgumentType.getString(context, "arg1"));
+                                float arg2 = Float.parseFloat(StringArgumentType.getString(context, "arg2"));
+                                action.accept(arg1, arg2);
+                                return 1;
+                            }
+                            catch(Exception e){
+                                FeedbackMessage(Component.translatable("invalid-argument"));
+                                return 1;
+
+                            }
+                        })
+                    )
+                )
+            );
+        });
+    }
+
     public static void FeedbackMessage(Component message){
         Minecraft.getInstance().player.displayClientMessage(message, false);
     }

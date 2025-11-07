@@ -16,5 +16,6 @@
     "F3-menu":"F3 Menu",
     "enabled":"enabled",
     "disabled":"disabled",
-    "uuid-copied":"UUID copied to the clipboard!"
+    "uuid-copied":"UUID copied to the clipboard!",
+    "rotation-set":"Rotation set to"
 }

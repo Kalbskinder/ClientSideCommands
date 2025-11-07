@@ -9,6 +9,7 @@ import fr.madu59.Commands.DebugRendererCommand;
 import fr.madu59.Commands.EmojiCommand;
 import fr.madu59.Commands.FOVCommand;
 import fr.madu59.Commands.GammaCommand;
+import fr.madu59.Commands.LookAtCommand;
 import fr.madu59.Commands.PositionCommand;
 import fr.madu59.Commands.RotationCommand;
 import fr.madu59.Commands.UUIDCommand;
@@ -34,5 +35,6 @@ public class ClientSideCommandsClient implements ClientModInitializer {
 		FOVCommand.Register();
 		GammaCommand.Register();
 		UUIDCommand.Register();
+		LookAtCommand.Register();
 	}
 }

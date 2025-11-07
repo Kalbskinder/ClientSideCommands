@@ -17,6 +17,7 @@ Adds a bunch of useful non-cheat clientside commands to your game such as
    <li><b>/fov ...</b> : set a fov value (allow for values outside of the expected range)</li>
    <li><b>/gamma ...</b> : set a gamma value (allow for values outside of the expected range)</li>
    <li><b>/emoji ...</b> : send an emoji in the chat (such as ¯\(ツ)/¯ or (⊙ _ ⊙ ) )</li>
+   <li><b>/lookat ... ...</b> : rotate your camera to the specified yaw and pitch</li>
    <li><b>/toggle debugrenderer ...</b> : toggle one of the <a href=https://minecraft.wiki/w/Java_Developer_Tools>debug renderers</a>, not accessible from inside of the vanilla game</li>
    <li><b>/toggle fps/tps/position</b> : toggle the visibility of f3's elements even when the f3 menu is closed</li>
    <li>All the /copy command arguments also exists as standalone command to display the value</li>
