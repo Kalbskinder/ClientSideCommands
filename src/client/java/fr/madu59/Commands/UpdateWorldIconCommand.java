@@ -51,6 +51,8 @@ public class UpdateWorldIconCommand {
 								resized.writeToFile(path);
 							} catch (IOException e) {
 								e.printStackTrace();
+                                CommandUtils.feedbackMessage(Component.translatable("error"));
+                                return;
 							} finally {
 								nativeImage.close();
 							}

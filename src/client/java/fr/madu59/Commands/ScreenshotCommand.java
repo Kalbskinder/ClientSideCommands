@@ -2,8 +2,6 @@ package fr.madu59.Commands;
 
 import fr.madu59.Events.FrameEvent.FrameEnd;
 import fr.madu59.Utils.CommandUtils;
-import net.fabricmc.fabric.api.event.Event;
-import net.fabricmc.fabric.api.event.EventFactory;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.Screenshot;
 import net.minecraft.network.chat.Component;
