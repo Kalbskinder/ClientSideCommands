@@ -6,11 +6,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
 
 public class GammaCommand {
-    public static void Register(){
-        CommandUtils.RegisterOneArg("set gamma", GammaCommand::SetGamma);
+    public static void register(){
+        CommandUtils.registerOneArg("set gamma", GammaCommand::setGamma);
     }
 
-    public static void SetGamma(String gamma){
+    public static void setGamma(String gamma){
         Player player = Minecraft.getInstance().player;
         double value;
         try {
@@ -21,6 +21,6 @@ public class GammaCommand {
             return;
         }
         Minecraft.getInstance().options.gamma().value = value;
-        CommandUtils.FeedbackMessage(Component.translatable("gamma-set", gamma));
+        CommandUtils.feedbackMessage(Component.translatable("gamma-set", gamma));
     }
 }

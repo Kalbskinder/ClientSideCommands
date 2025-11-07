@@ -6,13 +6,13 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
 
 public class PositionCommand {
-    public static void Register(){
-        CommandUtils.RegisterSimple("mypos", PositionCommand::WritePosition);
+    public static void register(){
+        CommandUtils.registerSimple("mypos", PositionCommand::writePosition);
     }
 
-    public static void WritePosition(){
+    public static void writePosition(){
         Player player = Minecraft.getInstance().player;
         String copy = player.getX() + ", " + player.getY() + ", " + player.getZ();
-        CommandUtils.FeedbackMessage(Component.literal("XYZ: " + player.getX() + " / " + player.getY() + " / " + player.getZ()), copy);
+        CommandUtils.feedbackMessage(Component.literal("XYZ: " + player.getX() + " / " + player.getY() + " / " + player.getZ()), copy);
     }
 }

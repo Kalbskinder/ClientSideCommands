@@ -39,12 +39,12 @@ public class EmojiCommand {
         put("broken_heart", "💔");
     }};
 
-    public static void Register(){
+    public static void register(){
         List<String> options = emojiMap.keySet().stream().toList();
-        CommandUtils.RegisterOneArg("emoji", options, EmojiCommand::WriteEmoji);
+        CommandUtils.registerOneArg("emoji", options, EmojiCommand::writeEmoji);
     }
 
-    public static void WriteEmoji(String emoji){
+    public static void writeEmoji(String emoji){
         Minecraft.getInstance().getConnection().sendChat(emoji);
     }
 }

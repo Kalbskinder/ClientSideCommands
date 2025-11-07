@@ -21,7 +21,7 @@ import net.minecraft.util.debug.DebugValueAccess;
 @Mixin(DebugRenderer.class)
 public abstract class DebugRendererMixin {
     @Inject(method = "render", at = @At("TAIL"))
-    public void Render(PoseStack poseStack, Frustum frustum, MultiBufferSource.BufferSource bufferSource, double d, double e, double f, boolean bl, CallbackInfo ci, @Local DebugValueAccess debugValueAccess) {
+    public void render(PoseStack poseStack, Frustum frustum, MultiBufferSource.BufferSource bufferSource, double d, double e, double f, boolean bl, CallbackInfo ci, @Local DebugValueAccess debugValueAccess) {
         if(!bl){
             List<SimpleDebugRenderer> list = DebugRendererCommand.GetActiveRenderers();
             Iterator<SimpleDebugRenderer> var14 = list.iterator();

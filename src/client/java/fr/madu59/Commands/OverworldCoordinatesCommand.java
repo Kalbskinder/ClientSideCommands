@@ -7,11 +7,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.network.chat.Component;
 
 public class OverworldCoordinatesCommand {
-    public static void Register(){
-        CommandUtils.RegisterSimple("myoverworldpos", OverworldCoordinatesCommand::WriteOverworldCoordinates);
+    public static void register(){
+        CommandUtils.registerSimple("myoverworldpos", OverworldCoordinatesCommand::writeOverworldCoordinates);
     }
 
-    public static void WriteOverworldCoordinates(){
+    public static void writeOverworldCoordinates(){
         Player player = Minecraft.getInstance().player;
         double x = player.getX();
         double y = player.getY();
@@ -21,6 +21,6 @@ public class OverworldCoordinatesCommand {
             z *= 8;
         }
         String copy = x + ", " + y + ", " + z;
-        CommandUtils.FeedbackMessage(Component.literal("XYZ: " + x + " / " + y + "/" + z), copy);
+        CommandUtils.feedbackMessage(Component.literal("XYZ: " + x + " / " + y + "/" + z), copy);
     }
 }

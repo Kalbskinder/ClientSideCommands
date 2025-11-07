@@ -23,25 +23,25 @@ public class ClientSideCommandsClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
-		RegisterCommands();
+		registerCommands();
 	}
 
-	public void RegisterCommands(){
-		PositionCommand.Register();
-		RotationCommand.Register();
-		CopyPositionCommand.Register();
-		CopyRotationCommand.Register();
-		CopyUUIDCommand.Register();
-		EmojiCommand.Register();
-		CalcCommand.Register();
-		DebugRendererCommand.Register();
-		DebugCommand.Register();
-		FOVCommand.Register();
-		GammaCommand.Register();
-		UUIDCommand.Register();
-		LookAtCommand.Register();
-		NetherCoordinatesCommand.Register();
-		OverworldCoordinatesCommand.Register();
-		ClearChatCommand.Register();
+	public void registerCommands(){
+		PositionCommand.register();
+		RotationCommand.register();
+		CopyPositionCommand.register();
+		CopyRotationCommand.register();
+		CopyUUIDCommand.register();
+		EmojiCommand.register();
+		CalcCommand.register();
+		DebugRendererCommand.register();
+		DebugCommand.register();
+		FOVCommand.register();
+		GammaCommand.register();
+		UUIDCommand.register();
+		LookAtCommand.register();
+		NetherCoordinatesCommand.register();
+		OverworldCoordinatesCommand.register();
+		ClearChatCommand.register();
 	}
 }

@@ -42,20 +42,20 @@ public class DebugRendererCommand {
         rendererStatus.put(name, false);
     }
 
-    public static void Register(){
+    public static void register(){
         CreateRenderers();
         List<String> options = rendererNames.keySet().stream().toList();
-        CommandUtils.RegisterOneArg("toggle debugrenderer", options, DebugRendererCommand::ToggleRenderer);
+        CommandUtils.registerOneArg("toggle debugrenderer", options, DebugRendererCommand::ToggleRenderer);
     }
 
     public static void ToggleRenderer(String name){
         Boolean status = rendererStatus.get(name);
         if(status == null) {
-            CommandUtils.FeedbackMessage(Component.translatable("invalid-argument"));
+            CommandUtils.feedbackMessage(Component.translatable("invalid-argument"));
             return;
         }
         rendererStatus.put(name, !status);
-        CommandUtils.FeedbackMessage(Component.literal("Debug Renderer '" + name + "' " + (!status ? I18n.get("enabled") : I18n.get("disabled"))));
+        CommandUtils.feedbackMessage(Component.literal("Debug Renderer '" + name + "' " + (!status ? I18n.get("enabled") : I18n.get("disabled"))));
     }
 
     public static List<SimpleDebugRenderer> GetActiveRenderers(){

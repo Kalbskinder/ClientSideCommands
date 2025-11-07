@@ -6,14 +6,14 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 
 public class CopyRotationCommand {
-    public static void Register(){
-        CommandUtils.RegisterSimple("copy myrot", CopyRotationCommand::CopyRotation);
+    public static void register(){
+        CommandUtils.registerSimple("copy myrot", CopyRotationCommand::copyRotation);
     }
 
-    public static void CopyRotation(){
+    public static void copyRotation(){
         Minecraft client = Minecraft.getInstance();
         Player player = client.player;
         client.keyboardHandler.setClipboard(player.getYHeadRot() + ", " + player.getXRot());
-        CommandUtils.FeedbackMessage(Component.translatable("rotation-copied"));
+        CommandUtils.feedbackMessage(Component.translatable("rotation-copied"));
     }
 }

@@ -7,11 +7,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.network.chat.Component;
 
 public class NetherCoordinatesCommand {
-    public static void Register(){
-        CommandUtils.RegisterSimple("mynetherpos", NetherCoordinatesCommand::WriteNetherCoordinates);
+    public static void register(){
+        CommandUtils.registerSimple("mynetherpos", NetherCoordinatesCommand::writeNetherCoordinates);
     }
 
-    public static void WriteNetherCoordinates(){
+    public static void writeNetherCoordinates(){
         Player player = Minecraft.getInstance().player;
         double x = player.getX();
         double y = player.getY();
@@ -21,6 +21,6 @@ public class NetherCoordinatesCommand {
             z /= 8;
         }
         String copy = x + ", " + y + ", " + z;
-        CommandUtils.FeedbackMessage(Component.literal("XYZ: " + x + " / " + y + "/" + z), copy);
+        CommandUtils.feedbackMessage(Component.literal("XYZ: " + x + " / " + y + "/" + z), copy);
     }
 }

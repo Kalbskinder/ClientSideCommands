@@ -17,13 +17,12 @@ import net.minecraft.network.chat.Style;
 
 public class CommandUtils {
     
-    public static void RegisterSimple(String commandName, Runnable action){
+    public static void registerSimple(String commandName, Runnable action){
         String[] commandNameSplit = commandName.split(" ");
         if (commandNameSplit.length == 2) {
-            RegisterSimple(commandNameSplit[0], commandNameSplit[1], action);
+            registerSimple(commandNameSplit[0], commandNameSplit[1], action);
             return;
         }
-
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
             dispatcher.register(
                 literal(commandName)
@@ -35,7 +34,7 @@ public class CommandUtils {
         });
     }
 
-    public static void RegisterSimple(String commandPart1, String commandPart2, Runnable action){
+    public static void registerSimple(String commandPart1, String commandPart2, Runnable action){
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
             dispatcher.register(
                 literal(commandPart1)
@@ -49,10 +48,10 @@ public class CommandUtils {
         });
     }
 
-    public static void RegisterOneArg(String commandName, List<String> options, java.util.function.Consumer<String> action){
+    public static void registerOneArg(String commandName, List<String> options, java.util.function.Consumer<String> action){
         String[] commandNameSplit = commandName.split(" ");
         if (commandNameSplit.length == 2) {
-            RegisterOneArg(commandNameSplit[0], commandNameSplit[1], options, action);
+            registerOneArg(commandNameSplit[0], commandNameSplit[1], options, action);
             return;
         }
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
@@ -68,7 +67,7 @@ public class CommandUtils {
         });
     }
 
-    public static void RegisterOneArg(String commandPart1, String commandPart2, List<String> options, java.util.function.Consumer<String> action){
+    public static void registerOneArg(String commandPart1, String commandPart2, List<String> options, java.util.function.Consumer<String> action){
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
             dispatcher.register(
                 literal(commandPart1)
@@ -84,10 +83,10 @@ public class CommandUtils {
         });
     }
 
-    public static void RegisterOneArg(String commandName, java.util.function.Consumer<String> action){
+    public static void registerOneArg(String commandName, java.util.function.Consumer<String> action){
         String[] commandNameSplit = commandName.split(" ");
         if (commandNameSplit.length == 2) {
-            RegisterOneArg(commandNameSplit[0], commandNameSplit[1], action);
+            registerOneArg(commandNameSplit[0], commandNameSplit[1], action);
             return;
         }
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
@@ -103,7 +102,7 @@ public class CommandUtils {
         });
     }
 
-    public static void RegisterOneArg(String commandPart1, String commandPart2, java.util.function.Consumer<String> action){
+    public static void registerOneArg(String commandPart1, String commandPart2, java.util.function.Consumer<String> action){
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
             dispatcher.register(
                 literal(commandPart1)
@@ -119,7 +118,7 @@ public class CommandUtils {
         });
     }
 
-    public static void RegisterTwoArgs(String commandName, java.util.function.BiConsumer<Float, Float> action){
+    public static void registerTwoArgs(String commandName, java.util.function.BiConsumer<Float, Float> action){
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
             dispatcher.register(
                 literal(commandName)
@@ -133,9 +132,8 @@ public class CommandUtils {
                                 return 1;
                             }
                             catch(Exception e){
-                                FeedbackMessage(Component.translatable("invalid-argument"));
-                                return 1;
-
+                                feedbackMessage(Component.translatable("invalid-argument"));
+                                return 0;
                             }
                         })
                     )
@@ -144,11 +142,11 @@ public class CommandUtils {
         });
     }
 
-    public static void FeedbackMessage(Component message){
+    public static void feedbackMessage(Component message){
         Minecraft.getInstance().player.displayClientMessage(message, false);
     }
 
-    public static void FeedbackMessage(Component message, String copy){
+    public static void feedbackMessage(Component message, String copy){
         Minecraft.getInstance().player.displayClientMessage(((MutableComponent)message).withStyle(
                 Style.EMPTY
                     .withHoverEvent(

@@ -6,13 +6,13 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
 
 public class RotationCommand {
-    public static void Register(){
-        CommandUtils.RegisterSimple("myrot", RotationCommand::WriteRotation);
+    public static void register(){
+        CommandUtils.registerSimple("myrot", RotationCommand::writeRotation);
     }
 
-    public static void WriteRotation(){
+    public static void writeRotation(){
         Player player = Minecraft.getInstance().player;
         String copy = player.getYHeadRot() + ", " + player.getXRot();
-        CommandUtils.FeedbackMessage(Component.literal("YX: " + player.getYHeadRot() + " / " + player.getXRot()), copy);
+        CommandUtils.feedbackMessage(Component.literal("YX: " + player.getYHeadRot() + " / " + player.getXRot()), copy);
     }
 }

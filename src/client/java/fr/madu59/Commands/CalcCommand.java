@@ -4,18 +4,18 @@ import fr.madu59.Utils.CommandUtils;
 import net.minecraft.network.chat.Component;
 
 public class CalcCommand {
-    public static void Register(){
-        CommandUtils.RegisterOneArg("calculate", CalcCommand::WriteCalcResult);
-        CommandUtils.RegisterOneArg("calc", CalcCommand::WriteCalcResult);
+    public static void register(){
+        CommandUtils.registerOneArg("calculate", CalcCommand::writeCalcResult);
+        CommandUtils.registerOneArg("calc", CalcCommand::writeCalcResult);
     }
 
-    public static void WriteCalcResult(String expression){
+    public static void writeCalcResult(String expression){
 
-        String copy = ParseAndCalc(expression);
-        CommandUtils.FeedbackMessage(Component.literal(copy), copy);
+        String copy = parseAndCalc(expression);
+        CommandUtils.feedbackMessage(Component.literal(copy), copy);
     }
 
-    public static String ParseAndCalc(String input){
+    public static String parseAndCalc(String input){
         try {
             double result = new Object() {
                 int pos = -1, ch;

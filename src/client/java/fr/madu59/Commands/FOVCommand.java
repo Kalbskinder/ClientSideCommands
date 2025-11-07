@@ -6,11 +6,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
 
 public class FOVCommand {
-    public static void Register(){
-        CommandUtils.RegisterOneArg("set fov", FOVCommand::SetFOV);
+    public static void register(){
+        CommandUtils.registerOneArg("set fov", FOVCommand::setFOV);
     }
 
-    public static void SetFOV(String fov){
+    public static void setFOV(String fov){
         Player player = Minecraft.getInstance().player;
         int value;
         try {
@@ -21,6 +21,6 @@ public class FOVCommand {
             return;
         }
         Minecraft.getInstance().options.fov().value = value;
-        CommandUtils.FeedbackMessage(Component.translatable("fov-set", fov));
+        CommandUtils.feedbackMessage(Component.translatable("fov-set", fov));
     }
 }
