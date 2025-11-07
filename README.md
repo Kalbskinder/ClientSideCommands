@@ -22,6 +22,7 @@ Adds a bunch of useful non-cheat clientside commands to your game such as
    <li><b>/rc</b> : reload chunks</li>
    <li><b>/rr</b> : reload ressourcepacks</li>
    <li><b>/ss</b> : takes a screenshot</li>
+   <li><b>/uw</b> : updates worldicon</li>
    <li><b>/quit</b> : quit the world/server and go back to the main menu</li>
    <li><b>/set fov ...</b> : set a fov value (allow for values outside of the expected range)</li>
    <li><b>/set gamma ...</b> : set a gamma value (allow for values outside of the expected range)</li>
