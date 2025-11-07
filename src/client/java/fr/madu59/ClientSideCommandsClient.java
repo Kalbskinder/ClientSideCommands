@@ -1,6 +1,7 @@
 package fr.madu59;
 
 import fr.madu59.Commands.CalcCommand;
+import fr.madu59.Commands.ClearChatCommand;
 import fr.madu59.Commands.CopyPositionCommand;
 import fr.madu59.Commands.CopyRotationCommand;
 import fr.madu59.Commands.CopyUUIDCommand;
@@ -16,6 +17,7 @@ import fr.madu59.Commands.PositionCommand;
 import fr.madu59.Commands.RotationCommand;
 import fr.madu59.Commands.UUIDCommand;
 import net.fabricmc.api.ClientModInitializer;
+import net.minecraft.world.level.levelgen.structure.templatesystem.rule.blockentity.Clear;
 
 public class ClientSideCommandsClient implements ClientModInitializer {
 	@Override
@@ -40,5 +42,6 @@ public class ClientSideCommandsClient implements ClientModInitializer {
 		LookAtCommand.Register();
 		NetherCoordinatesCommand.Register();
 		OverworldCoordinatesCommand.Register();
+		ClearChatCommand.Register();
 	}
 }

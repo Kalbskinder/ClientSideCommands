@@ -21,7 +21,7 @@ Adds a bunch of useful non-cheat clientside commands to your game such as
    <li><b>/mynetherpos</b> convert your coordinates to the nether (/8 if the player is not already in the nether)</li>
    <li><b>/myoverworldpos</b> convert your coordinates to the overworld (*8 if the player is not already in the overworld)</li>
    <li><b>/toggle debugrenderer ...</b> : toggle one of the <a href=https://minecraft.wiki/w/Java_Developer_Tools>debug renderers</a>, not accessible from inside of the vanilla game</li>
-   <li><b>/toggle fps/tps/position</b> : toggle the visibility of f3's elements even when the f3 menu is closed</li>
+   <li><b>/clearchat</b> : clear the chat</li>
    <li>All the /copy command arguments also exists as standalone command to display the value</li>
 </ul>
 </details>

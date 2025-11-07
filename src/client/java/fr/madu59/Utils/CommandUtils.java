@@ -69,11 +69,6 @@ public class CommandUtils {
     }
 
     public static void RegisterOneArg(String commandPart1, String commandPart2, List<String> options, java.util.function.Consumer<String> action){
-        String[] commandNameSplit = commandPart1.split(" ");
-        if (commandNameSplit.length == 2) {
-            RegisterOneArg(commandNameSplit[0], commandNameSplit[1], options, action);
-            return;
-        }
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
             dispatcher.register(
                 literal(commandPart1)
@@ -90,6 +85,11 @@ public class CommandUtils {
     }
 
     public static void RegisterOneArg(String commandName, java.util.function.Consumer<String> action){
+        String[] commandNameSplit = commandName.split(" ");
+        if (commandNameSplit.length == 2) {
+            RegisterOneArg(commandNameSplit[0], commandNameSplit[1], action);
+            return;
+        }
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
             dispatcher.register(
                 literal(commandName)
@@ -98,6 +98,22 @@ public class CommandUtils {
                         action.accept(StringArgumentType.getString(context, "expression"));
                         return 1;
                     })
+                )
+            );
+        });
+    }
+
+    public static void RegisterOneArg(String commandPart1, String commandPart2, java.util.function.Consumer<String> action){
+        ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
+            dispatcher.register(
+                literal(commandPart1)
+                .then(literal(commandPart2)
+                    .then(argument("expression", StringArgumentType.greedyString())
+                        .executes(context -> {
+                            action.accept(StringArgumentType.getString(context, "expression"));
+                            return 1;
+                        })
+                    )
                 )
             );
         });
