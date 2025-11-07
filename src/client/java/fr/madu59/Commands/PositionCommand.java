@@ -7,7 +7,7 @@ import net.minecraft.network.chat.Component;
 
 public class PositionCommand {
     public static void Register(){
-        CommandUtils.RegisterSimple("position", PositionCommand::WritePosition);
+        CommandUtils.RegisterSimple("mypos", PositionCommand::WritePosition);
     }
 
     public static void WritePosition(){
