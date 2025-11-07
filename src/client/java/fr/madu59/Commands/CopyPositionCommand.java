@@ -7,7 +7,7 @@ import net.minecraft.world.entity.player.Player;
 
 public class CopyPositionCommand {
     public static void Register(){
-        CommandUtils.RegisterSimple("copy pos", CopyPositionCommand::CopyPosition);
+        CommandUtils.RegisterSimple("copy mypos", CopyPositionCommand::CopyPosition);
     }
 
     public static void CopyPosition(){

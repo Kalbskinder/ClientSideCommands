@@ -15,5 +15,6 @@
     "entity-hitboxes-display":"Entity Hitboxes Display",
     "F3-menu":"F3 Menu",
     "enabled":"enabled",
-    "disabled":"disabled"
+    "disabled":"disabled",
+    "uuid-copied":"UUID copied to the clipboard!"
 }
