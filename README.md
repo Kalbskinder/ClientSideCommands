@@ -18,6 +18,7 @@ Adds a bunch of useful non-cheat clientside commands to your game such as
    <li><b>/mynetherpos</b> convert your coordinates to the nether (/8 if the player is not already in the nether)</li>
    <li><b>/myoverworldpos</b> convert your coordinates to the overworld (*8 if the player is not already in the overworld)</li>
    <li><b>/clearchat</b> : clear the chat</li>
+   <li><b>/wiki</b> : open the wiki's page of the held item</li>
    <li><b>/rc</b> : reload chunks</li>
    <li><b>/rr</b> : reload ressourcepacks</li>
    <li><b>/ss</b> : takes a screenshot</li>

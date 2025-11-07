@@ -21,6 +21,7 @@ import fr.madu59.Commands.ReloadRessourcePacksCommand;
 import fr.madu59.Commands.RotationCommand;
 import fr.madu59.Commands.ScreenshotCommand;
 import fr.madu59.Commands.UUIDCommand;
+import fr.madu59.Commands.WikiCommand;
 import net.fabricmc.api.ClientModInitializer;
 
 public class ClientSideCommandsClient implements ClientModInitializer {
@@ -52,5 +53,6 @@ public class ClientSideCommandsClient implements ClientModInitializer {
 		ReloadChunksCommand.register();
 		ReloadRessourcePacksCommand.register();
 		ScreenshotCommand.register();
+		WikiCommand.register();
 	}
 }
