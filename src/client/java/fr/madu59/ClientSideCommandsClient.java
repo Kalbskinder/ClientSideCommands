@@ -14,10 +14,10 @@ import fr.madu59.Commands.LookAtCommand;
 import fr.madu59.Commands.NetherCoordinatesCommand;
 import fr.madu59.Commands.OverworldCoordinatesCommand;
 import fr.madu59.Commands.PositionCommand;
+import fr.madu59.Commands.QuitCommand;
 import fr.madu59.Commands.RotationCommand;
 import fr.madu59.Commands.UUIDCommand;
 import net.fabricmc.api.ClientModInitializer;
-import net.minecraft.world.level.levelgen.structure.templatesystem.rule.blockentity.Clear;
 
 public class ClientSideCommandsClient implements ClientModInitializer {
 	@Override
@@ -43,5 +43,6 @@ public class ClientSideCommandsClient implements ClientModInitializer {
 		NetherCoordinatesCommand.register();
 		OverworldCoordinatesCommand.register();
 		ClearChatCommand.register();
+		QuitCommand.register();
 	}
 }
