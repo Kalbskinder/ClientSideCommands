@@ -5,23 +5,24 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
 
-public class FOVCommand {
+public class HUDScaleCommand {
     public static void register(){
-        CommandUtils.registerOneArg("set fov", FOVCommand::setFOV);
+        CommandUtils.registerOneArg("set hudscale", HUDScaleCommand::setHUDScale);
     }
 
-    public static void setFOV(String fov){
+    public static void setHUDScale(String scale){
         Player player = Minecraft.getInstance().player;
         int value;
         try {
-            value = Integer.parseInt(fov);
+            value = Integer.parseInt(scale);
         }
         catch (Exception e) {
             player.displayClientMessage(Component.translatable("invalid-value"), false);
             return;
         }
-        Minecraft.getInstance().options.fov().value = value;
+        Minecraft.getInstance().options.guiScale().value = value;
         Minecraft.getInstance().options.save();
-        CommandUtils.feedbackMessage(Component.translatable("fov-set", fov));
+        Minecraft.getInstance().resizeDisplay();
+        CommandUtils.feedbackMessage(Component.translatable("hudscale-set", scale));
     }
 }

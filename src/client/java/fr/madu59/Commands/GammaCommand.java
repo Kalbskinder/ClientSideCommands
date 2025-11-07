@@ -17,10 +17,11 @@ public class GammaCommand {
             value = Double.parseDouble(gamma);
         }
         catch (Exception e) {
-            player.displayClientMessage(Component.translatable("invalid-gamma"), false);
+            player.displayClientMessage(Component.translatable("invalid-value"), false);
             return;
         }
         Minecraft.getInstance().options.gamma().value = value;
+        Minecraft.getInstance().options.save();
         CommandUtils.feedbackMessage(Component.translatable("gamma-set", gamma));
     }
 }

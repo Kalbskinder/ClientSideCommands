@@ -10,12 +10,16 @@ import fr.madu59.Commands.DebugRendererCommand;
 import fr.madu59.Commands.EmojiCommand;
 import fr.madu59.Commands.FOVCommand;
 import fr.madu59.Commands.GammaCommand;
+import fr.madu59.Commands.HUDScaleCommand;
 import fr.madu59.Commands.LookAtCommand;
 import fr.madu59.Commands.NetherCoordinatesCommand;
 import fr.madu59.Commands.OverworldCoordinatesCommand;
 import fr.madu59.Commands.PositionCommand;
 import fr.madu59.Commands.QuitCommand;
+import fr.madu59.Commands.ReloadChunksCommand;
+import fr.madu59.Commands.ReloadRessourcePacksCommand;
 import fr.madu59.Commands.RotationCommand;
+import fr.madu59.Commands.ScreenshotCommand;
 import fr.madu59.Commands.UUIDCommand;
 import net.fabricmc.api.ClientModInitializer;
 
@@ -44,5 +48,9 @@ public class ClientSideCommandsClient implements ClientModInitializer {
 		OverworldCoordinatesCommand.register();
 		ClearChatCommand.register();
 		QuitCommand.register();
+		HUDScaleCommand.register();
+		ReloadChunksCommand.register();
+		ReloadRessourcePacksCommand.register();
+		ScreenshotCommand.register();
 	}
 }

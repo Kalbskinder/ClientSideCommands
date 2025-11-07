@@ -8,6 +8,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.language.I18n;
 import net.minecraft.commands.SharedSuggestionProvider;
 import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.Component;
@@ -144,6 +145,10 @@ public class CommandUtils {
 
     public static void feedbackMessage(Component message){
         Minecraft.getInstance().player.displayClientMessage(message, false);
+    }
+
+    public static void feedbackMessage(String message, boolean status){
+        Minecraft.getInstance().player.displayClientMessage(Component.literal(message + " " + (status? I18n.get("enabled") : I18n.get("disabled"))), false);
     }
 
     public static void feedbackMessage(Component message, String copy){
