@@ -30,7 +30,7 @@ Adds a bunch of useful non-cheat clientside commands to your game such as
    <li><b>/toggle fog</b> : toggle in-game fog</li>
    <li><b>/toggle advancedtooltips</b> : toggle advanced item tooltips</li>
    <li><b>/toggle f3menu (/f3)</b> : toggle the f3 menu, useful for keyboards without the f3 key</li>
-   <li><b>/toggle debugrenderer ...</b> : toggle one of the <a href=https://minecraft.wiki/w/Java_Developer_Tools>debug renderers</a>, not accessible from inside of the vanilla game</li>
+   <li><b>/toggle debugrenderer ...</b> : toggle <a href=https://minecraft.wiki/w/Java_Developer_Tools>debug renderers</a>, not toggleable in vanilla</li>
    <li>All the /copy command arguments also exists as standalone command to display the value</li>
 </ul>
 </details>
