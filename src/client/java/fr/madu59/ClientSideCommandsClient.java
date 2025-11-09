@@ -20,6 +20,7 @@ import fr.madu59.Commands.ReloadChunksCommand;
 import fr.madu59.Commands.ReloadRessourcePacksCommand;
 import fr.madu59.Commands.RotationCommand;
 import fr.madu59.Commands.ScreenshotCommand;
+import fr.madu59.Commands.DateCommand;
 import fr.madu59.Commands.UUIDCommand;
 import fr.madu59.Commands.UpdateWorldIconCommand;
 import fr.madu59.Commands.WikiCommand;
@@ -56,5 +57,6 @@ public class ClientSideCommandsClient implements ClientModInitializer {
 		ScreenshotCommand.register();
 		WikiCommand.register();
 		UpdateWorldIconCommand.register();
+		DateCommand.register();
 	}
 }
