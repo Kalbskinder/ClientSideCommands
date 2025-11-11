@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/maDU59/ClientSideCommands/main/src/main/resources/assets/clientsidecommands/icon.png" width="150">
   <h1>ClientSide Commands</h1>
 
-  <a href="https://modrinth.com/mod/client-side-commands"><img src="https://img.shields.io/badge/dynamic/json?color=158000&label=downloads&prefix=+%20&query=downloads&url=https://api.modrinth.com/v2/p[...]
+  <a href="https://modrinth.com/mod/client-side-commands"><img src="https://img.shields.io/badge/dynamic/json?color=158000&label=downloads&prefix=+%20&query=downloads&url=https://api.modrinth.com/v2/project/JZfbWwYU&logo=modrinth"></a>
   <a href="https://curseforge.com/minecraft/mc-mods/clientside-commands"><img src="https://cf.way2muchnoise.eu/full_1381243_downloads.svg"></a>
 </div>
 
