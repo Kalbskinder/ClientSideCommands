@@ -9,6 +9,10 @@ import fr.madu59.Commands.DebugCommand;
 import fr.madu59.Commands.DebugRendererCommand;
 import fr.madu59.Commands.EmojiCommand;
 import fr.madu59.Commands.FOVCommand;
+import fr.madu59.Commands.GameModeCommands.GmACommand;
+import fr.madu59.Commands.GameModeCommands.GmCCommand;
+import fr.madu59.Commands.GameModeCommands.GmSCommand;
+import fr.madu59.Commands.GameModeCommands.GmSpecCommand;
 import fr.madu59.Commands.GammaCommand;
 import fr.madu59.Commands.HUDScaleCommand;
 import fr.madu59.Commands.LookAtCommand;
@@ -58,5 +62,9 @@ public class ClientSideCommandsClient implements ClientModInitializer {
 		WikiCommand.register();
 		UpdateWorldIconCommand.register();
 		DateCommand.register();
+        GmCCommand.register();
+        GmSCommand.register();
+        GmSpecCommand.register();
+        GmACommand.register();
 	}
 }
