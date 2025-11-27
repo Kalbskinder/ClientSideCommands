@@ -14,7 +14,7 @@ public class StackCommand {
     }
 
     public static void calculateStacks(int itemCount, int itemPerStack){
-        if (itemCount <= 0 || itemPerStack <= 0) {
+        if (itemCount < 0 || itemPerStack <= 0) {
             CommandUtils.feedbackMessage(Component.translatable("invalid-values"));
             return;
         }
