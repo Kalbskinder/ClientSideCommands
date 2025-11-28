@@ -18,6 +18,7 @@ public class EmojiCommand {
         put("love","♥‿♥");
         put("happy","◕‿◕");
         put("smile", "😀");
+        put("smile_filled", "☻");
         put("laughing", "😂");
         put("sweat_smile", "😅");
         put("blush", "😊");
@@ -37,6 +38,15 @@ public class EmojiCommand {
         put("tada", "🎉");
         put("heart", "❤️");
         put("broken_heart", "💔");
+        put("skull", "☠");
+        put("snowman", "☃");
+        put("snow", "❄");
+        put("check", "✔");
+        put("peace", "✌");
+        put("music", "♬");
+        put("fishing", "🎣");
+        put("fish", "🐟");
+        put("coffee", "☕");
     }};
 
     public static void register(){
