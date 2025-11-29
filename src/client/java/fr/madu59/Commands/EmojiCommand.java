@@ -36,7 +36,7 @@ public class EmojiCommand {
         put("fire", "🔥");
         put("star", "🌟");
         put("tada", "🎉");
-        put("heart", "❤️");
+        put("heart", "❤");
         put("broken_heart", "💔");
         put("skull", "☠");
         put("snowman", "☃");
